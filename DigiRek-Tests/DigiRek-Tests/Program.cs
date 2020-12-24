@@ -6,7 +6,13 @@ namespace DigiRek_Tests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Run();
+        }
+
+        private static void Run()
+        {
+            throw new NotImplementedException();
         }
     }
-}
+    
+}  

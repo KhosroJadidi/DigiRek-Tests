@@ -77,6 +77,7 @@ dotnet test
 
 Upon running the code, a console message will provide you with the instruction that you need.
 Please follow the on-screen instructions to performe your desired function.
+Some classes in the codebase contain several functions that produce the same output (such as addition). This isn't a practical solution, but has been left in the code to demonstrate my ability to tackle a problem from different angels.You may "swap" these funtions in and out, by commneting and uncommenting them in the "Run" funtion (located in Program.cs).
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
