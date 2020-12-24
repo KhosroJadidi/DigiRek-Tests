@@ -65,7 +65,7 @@ You can choose to run the available tests individually or all at once.
 Open a Terminal->New Terminal to open a new terminal window.
 Navigate to the test folder by using the "cd" command.<br>
 cd [directory name] will move you one level deeper.<br>
-cd ..\ will take move you one level up.<br>
+cd ..\ will move you one level up.<br>
 Once in the tests directory, use the following command to run all tests:
 
 
