@@ -12,12 +12,12 @@ namespace DigiRek_Tests_UnitTests
     [TestCategory("Average Tests")]
     public class AverageTests
     {
+        private readonly Division sut = Division.Instance;
         private readonly double[] array = new double[] { 10, 20, 30 };
 
         [TestMethod]
         public void AverageTest()
         {
-            var sut = Division.Instance;
             var actual = sut.Average(array);
             var expected = 20;
             Assert.AreEqual(expected, actual);
@@ -25,7 +25,6 @@ namespace DigiRek_Tests_UnitTests
         [TestMethod]
         public void AverageLinqTest()
         {
-            var sut = Division.Instance;
             var actual = sut.AverageLinq(array);
             var expected = 20;
             Assert.AreEqual(expected, actual);

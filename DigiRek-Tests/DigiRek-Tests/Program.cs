@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigiRek_Tests.Displayers;
+using System;
 
 namespace DigiRek_Tests
 {
@@ -11,7 +12,8 @@ namespace DigiRek_Tests
 
         private static void Run()
         {
-            throw new NotImplementedException();
+            Messages.Instance.PrintWelcome();
+            Messages.Instance.PrintChoices();
         }
     }
     

@@ -11,12 +11,12 @@ namespace DigiRek_Tests
     [TestCategory("Addition Tests")]
     public class AdditionTests
     {
+        private readonly Addition sut = Addition.Instance;
         private readonly double[] array= new double[]{10,20,30};
 
         [TestMethod]
         public void SimpleAdditionTest()
         {
-            var sut = Addition.Instance;
             var actual =sut.Sum(array);
             var expected = 60;
             Assert.AreEqual(expected, actual);
@@ -24,7 +24,6 @@ namespace DigiRek_Tests
         [TestMethod]
         public void LinqAdditionTest()
         {
-            var sut = Addition.Instance;
             var actual = sut.SumLinq(array);
             var expected = 60;
             Assert.AreEqual(expected, actual);
@@ -33,7 +32,6 @@ namespace DigiRek_Tests
         [TestMethod]
         public void RecursiveSumTest()
         {
-            var sut = Addition.Instance;
             var actual = sut.SumRecursive(array);
             var expected = 60;
             Assert.AreEqual(expected, actual);
