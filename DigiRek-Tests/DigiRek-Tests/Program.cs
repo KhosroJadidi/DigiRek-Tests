@@ -1,4 +1,5 @@
 ﻿using DigiRek_Tests.Displayers;
+using DigiRek_Tests.Handlers;
 using System;
 
 namespace DigiRek_Tests
@@ -13,7 +14,15 @@ namespace DigiRek_Tests
         private static void Run()
         {
             Messages.Instance.PrintWelcome();
-            Messages.Instance.PrintChoices();
+            while (true)
+            {
+                var askedToQuit = false;
+                Messages.Instance.PrintChoices();
+                var input=InputHandlers.Instance.ReadInput();
+                InputHandlers.Instance.HandleInput(input,out askedToQuit);
+                if (askedToQuit)
+                    break;
+            }
         }
     }
     

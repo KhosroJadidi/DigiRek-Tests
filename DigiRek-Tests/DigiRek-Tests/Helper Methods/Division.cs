@@ -16,13 +16,15 @@ namespace DigiRek_Tests.HelperMethods
 
         public double Average(double[] array)
         {
-            return Addition.Instance
+            var average= Addition.Instance
                 .Sum(array) / array.Length;
+            return Math.Round(average, 2);
         }
 
         public double AverageLinq(double[] array)
         {
-            return array.Average();
+            var avergae= array.Average();
+            return Math.Round(avergae, 2);
         }
     }
 }

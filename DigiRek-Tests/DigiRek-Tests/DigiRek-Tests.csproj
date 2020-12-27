@@ -6,8 +6,4 @@
     <RootNamespace>DigiRek_Tests</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
-
 </Project>

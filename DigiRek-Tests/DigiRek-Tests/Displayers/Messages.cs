@@ -15,8 +15,9 @@ namespace DigiRek_Tests.Displayers
         {
             "Sum of all numbers (sum)",
             "Average of all numbers (average)",
-            "[X] Highest number (top X),where x is a positive integer",
-            "Map all values to a collection of key-value pairs (map)"
+            "Top 3 numbers (top),where x is a positive integer",
+            "Map all values to a collection of key-value pairs (map)",
+            "Quit the application (quit)"
         };
 
         public static Messages Instance { get; }

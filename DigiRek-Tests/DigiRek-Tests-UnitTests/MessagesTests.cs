@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace DigiRek_Tests_UnitTests
 {
     [TestClass]
+    [TestCategory("Messages Tests")]
     public class MessagesTests
     {
         private readonly Messages sut = Messages.Instance;
@@ -17,8 +18,9 @@ namespace DigiRek_Tests_UnitTests
         {
             "Sum of all numbers (sum)",
             "Average of all numbers (average)",
-            "[X] Highest number (top X),where x is a positive integer",
-            "Map all values to a collection of key-value pairs (map)"
+            "Top 3 numbers (top),where x is a positive integer",
+            "Map all values to a collection of key-value pairs (map)",
+            "Quit the application (quit)"
         };
 
         [TestMethod]
@@ -45,19 +47,14 @@ namespace DigiRek_Tests_UnitTests
             Console.SetOut(stringWriter);
             sut.PrintChoices();
             var actual = stringWriter.ToString();
-            var expected =
-                "Sum of all numbers (sum)"
-                + Environment.NewLine
-                + Environment.NewLine
-                + "Average of all numbers (average)"
-                + Environment.NewLine
-                + Environment.NewLine
-                + "[X] Highest number (top X),where x is a positive integer"
-                + Environment.NewLine
-                + Environment.NewLine
-                + "Map all values to a collection of key-value pairs (map)"
-                + Environment.NewLine
-                + Environment.NewLine;
+            var expected = string.Empty;
+            foreach (var item in choices)
+            {
+                expected +=
+                    item +
+                    Environment.NewLine +
+                    Environment.NewLine;
+            }
             Assert.AreEqual(expected, actual);
         }
     }
