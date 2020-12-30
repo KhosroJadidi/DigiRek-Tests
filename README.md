@@ -18,6 +18,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Som Explanation](#som-explanation)
 - [Built Using](#built_using)
 - [Author](#authors)
 
@@ -77,7 +78,21 @@ dotnet test
 
 Upon running the code, a console message will provide you with the instruction that you need.
 Please follow the on-screen instructions to performe your desired function.
-Some classes in the codebase contain several functions that produce the same output (such as addition). This isn't a practical solution, but has been left in the code to demonstrate my ability to tackle a problem from different angels.You may "swap" these funtions in and out, by commneting and uncommenting them in the "Run" funtion (located in Program.cs).
+Some classes in the codebase contain several functions that produce the same output (such as addition). This isn't a practical solution, but has been left in the code to demonstrate my ability to tackle a problem from different angels.You may "swap" these funtions in and out, by commneting and uncommenting them.
+
+## ❓ Some Explanation <a name="som-explanation"></a>
+
+<h4>Why are there so many public functions?</h4>
+I usually make most of my functions private. However, this test required me to have as many of them tested as possible. 
+Since the testing library has been located in a separate project, I had to make my functions public to be able to test them.
+
+<h4>Why haven't you tested some of the functions?</h4>
+A few functions contain already tested smaller functions. 
+It didn't feel necessary to test them, since their building blocks had already been tested.
+
+<h4>Why have you used the singleton design pattern in some parts of your code?</h4>
+This design pattern has been used to limit certain classes exposure, and guarantee that only one instance of such classes is used throughout the application.
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
