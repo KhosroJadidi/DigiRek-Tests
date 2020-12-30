@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DigiRek_Tests.Displayers
 {
-    public sealed class Messages
+    public class Messages
     {
         private Messages()
         {
         }
-        private readonly string[] choices = new[]
+        private static readonly string[] choices = new[]
         {
             "Sum of all numbers (sum)",
             "Average of all numbers (average)",
@@ -19,29 +19,28 @@ namespace DigiRek_Tests.Displayers
             "Map all values to a collection of key-value pairs (map)",
             "Quit the application (quit)"
         };
-
-        public static Messages Instance { get; }
-            = new Messages();
-
-        public void PrintChoices()
+        public static void PrintChoices()
         {
             foreach (var choice in choices)
             {
-                var text = choice + Environment.NewLine;
+                var text = 
+                    Environment.NewLine
+                    + choice 
+                    + Environment.NewLine;
                 Console.WriteLine(text);
             }
         }
-
-        public void PrintWelcome()
+        public static void PrintWelcome()
         {
             var message = "Welcome!"
                 +Environment.NewLine
-                +"Please choose the statistic that you need."
-                +Environment.NewLine
-                +"Type in the word inside the parentheses and press ENTER."
-                +Environment.NewLine;
+                + "Type in the word inside the parentheses to run the desired command, and press Enter."
+                + Environment.NewLine
+                + "You may also enter an entire sentence that contains the desired word."
+                + Environment.NewLine
+                + "If a Sentence contains several of such words, the application will use the first word."
+                + Environment.NewLine;
             Console.WriteLine(message);
         }
-
     }
 }

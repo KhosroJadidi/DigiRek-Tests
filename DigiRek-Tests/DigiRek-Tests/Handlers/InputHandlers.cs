@@ -41,10 +41,7 @@ namespace DigiRek_Tests.Handlers
                         handler.Key == inputElement;
                     if (inputContainsKey)
                     {
-                        InvokeHandler(handler);
-                        loopShouldEnd = true;
-                        if (handler.Key == "QUIT")
-                            askedToQuit = true;
+                        InvokeHandler(handler,out loopShouldEnd,out askedToQuit);
                         break;
                     }
                 }
@@ -54,9 +51,16 @@ namespace DigiRek_Tests.Handlers
             if(!loopShouldEnd)
                 HandleWrongInput();
         }
-        public void InvokeHandler(KeyValuePair<string, Action> input)
+        public void InvokeHandler
+            (KeyValuePair<string, Action> handler
+            ,out bool loopShouldEnd
+            ,out bool askedToQuit)
         {
-            input.Value.Invoke();
+            askedToQuit = false;
+            handler.Value.Invoke();
+            loopShouldEnd = true;
+            if (handler.Key == "QUIT")
+                askedToQuit = true;
         }
         public void HandleWrongInput()
         {

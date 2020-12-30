@@ -13,7 +13,6 @@ namespace DigiRek_Tests_UnitTests
     [TestCategory("Messages Tests")]
     public class MessagesTests
     {
-        private readonly Messages sut = Messages.Instance;
         private readonly string[] choices = new[]
         {
             "Sum of all numbers (sum)",
@@ -28,13 +27,15 @@ namespace DigiRek_Tests_UnitTests
         {
             using var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            sut.PrintWelcome();
+            Messages.PrintWelcome();
             var actual = stringWriter.ToString();
             var expected = "Welcome!"
                 + Environment.NewLine
-                + "Please choose the statistic that you need."
+                + "Type in the word inside the parentheses to run the desired command, and press Enter."
                 + Environment.NewLine
-                + "Type in the word inside the parentheses and press ENTER."
+                + "You may also enter an entire sentence that contains the desired word."
+                + Environment.NewLine
+                + "If a Sentence contains several of such words, the application will use the first word."
                 + Environment.NewLine
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
@@ -45,15 +46,16 @@ namespace DigiRek_Tests_UnitTests
         {
             using var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            sut.PrintChoices();
+            Messages.PrintChoices();
             var actual = stringWriter.ToString();
             var expected = string.Empty;
             foreach (var item in choices)
             {
                 expected +=
-                    item +
-                    Environment.NewLine +
-                    Environment.NewLine;
+                    Environment.NewLine
+                    +item 
+                    + Environment.NewLine
+                    + Environment.NewLine;
             }
             Assert.AreEqual(expected, actual);
         }

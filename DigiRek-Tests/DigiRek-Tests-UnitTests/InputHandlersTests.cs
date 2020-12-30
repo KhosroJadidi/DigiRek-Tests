@@ -56,7 +56,12 @@ namespace DigiRek_Tests_UnitTests
             var keyValuePair = 
                 new KeyValuePair<string, Action>
                 ("name", sut.HandleWrongInput);
-            sut.InvokeHandler(keyValuePair);
+            var loopShouldEnd = false;
+            var askedToQuit = false;
+            sut.InvokeHandler
+                (keyValuePair
+                ,out loopShouldEnd
+                ,out askedToQuit);
             var actual = stringWriter.ToString();
             var expected = "Wrong input. Please try again."
                 +Environment.NewLine;
