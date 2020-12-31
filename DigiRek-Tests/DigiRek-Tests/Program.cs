@@ -9,7 +9,6 @@ namespace DigiRek_Tests
         {
             Run();
         }
-
         private static void Run()
         {
             Messages.PrintWelcome();

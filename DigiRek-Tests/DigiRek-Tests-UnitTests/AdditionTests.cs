@@ -9,7 +9,6 @@ namespace DigiRek_Tests_UnitTests
     {
         private readonly Addition _sut = Addition.Instance;
         private readonly double[] _array = new double[] { 10, 20, 30 };
-
         [TestMethod]
         public void SimpleAdditionTest()
         {
@@ -17,7 +16,6 @@ namespace DigiRek_Tests_UnitTests
             var expected = 60;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void LinqAdditionTest()
         {
@@ -25,7 +23,6 @@ namespace DigiRek_Tests_UnitTests
             var expected = 60;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void RecursiveSumTest()
         {

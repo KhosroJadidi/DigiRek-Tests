@@ -9,7 +9,6 @@ namespace DigiRek_Tests_UnitTests
     {
         private readonly Division _sut = Division.Instance;
         private readonly double[] _array = new double[] { 10, 20, 30 };
-
         [TestMethod]
         public void AverageTest()
         {
@@ -17,7 +16,6 @@ namespace DigiRek_Tests_UnitTests
             var expected = 20;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void AverageLinqTest()
         {

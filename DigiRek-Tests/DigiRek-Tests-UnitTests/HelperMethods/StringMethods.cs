@@ -11,7 +11,6 @@ namespace DigiRek_Tests_UnitTests.HelperMethods
             Console.SetOut(stringWriter);
             return stringWriter;
         }
-
         public static void SetupStringReader(string input)
         {
             var stringReader = new StringReader(input);

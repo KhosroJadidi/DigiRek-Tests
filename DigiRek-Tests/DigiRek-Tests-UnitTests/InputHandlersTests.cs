@@ -21,7 +21,6 @@ namespace DigiRek_Tests_UnitTests
             var expected = "LOWERCASE";
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleWrongInputTest()
         {
@@ -33,7 +32,6 @@ namespace DigiRek_Tests_UnitTests
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleQuitTest()
         {
@@ -45,7 +43,6 @@ namespace DigiRek_Tests_UnitTests
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void InvokeHandlerTest()
         {
@@ -65,7 +62,6 @@ namespace DigiRek_Tests_UnitTests
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleInputIncorrectTest()
         {
@@ -78,7 +74,6 @@ namespace DigiRek_Tests_UnitTests
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleInputCorrectTest()
         {

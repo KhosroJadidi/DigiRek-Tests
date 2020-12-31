@@ -8,10 +8,8 @@ namespace DigiRek_Tests.Helper_Methods
         private Addition()
         {
         }
-
         public static Addition Instance { get; }
             = new Addition();
-
         public double Sum(double[] array)
         {
             var num = (double[])array.Clone();
@@ -27,12 +25,10 @@ namespace DigiRek_Tests.Helper_Methods
             }
             return sum;
         }
-
         public double SumLinq(double[] array)
         {
             return array.Sum();
         }
-
         public double SumRecursive(double[] array)
         {
             if (array.Length == 1)

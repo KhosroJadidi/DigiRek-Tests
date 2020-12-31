@@ -11,24 +11,20 @@ namespace DigiRek_Tests.Handlers
         {
             numbers = Numbers.GivenNumbers;
         }
-
         public static CalculationsHandlers Instance =
             new CalculationsHandlers();
 
         private double[] numbers;
-
         public void HandleSum()
         {
             var sum = Addition.Instance.Sum(numbers);
             Console.WriteLine($"The sum of all numbers is {sum}.");
         }
-
         public void HandleAverage()
         {
             var average = Division.Instance.Average(numbers);
             Console.WriteLine($"The average of all numbers is {average}.");
         }
-
         public void HandleTopThree()
         {
             var sortedArray = numbers.SortAscendingRecursive();
@@ -40,7 +36,6 @@ namespace DigiRek_Tests.Handlers
             }
             Console.WriteLine(message);
         }
-
         public void HandleMapping()
         {
             var message = string.Empty;

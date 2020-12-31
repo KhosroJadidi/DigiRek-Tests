@@ -17,7 +17,6 @@ namespace DigiRek_Tests_UnitTests
             "Map all values to a collection of key-value pairs (map)",
             "Quit the application (quit)"
         };
-
         [TestMethod]
         public void PrintWelcomeTest()
         {
@@ -36,7 +35,6 @@ namespace DigiRek_Tests_UnitTests
                 + Environment.NewLine;
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void PrintChoicesTest()
         {

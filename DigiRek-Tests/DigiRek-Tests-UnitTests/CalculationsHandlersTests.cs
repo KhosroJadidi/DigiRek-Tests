@@ -12,7 +12,6 @@ namespace DigiRek_Tests_UnitTests
     {
         private readonly CalculationsHandlers _sut
             = CalculationsHandlers.Instance;
-
         [TestMethod]
         public void HandleSumTest()
         {
@@ -23,7 +22,6 @@ namespace DigiRek_Tests_UnitTests
             var actual = stringWriter.ToString();
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleAverageTest()
         {
@@ -34,7 +32,6 @@ namespace DigiRek_Tests_UnitTests
             var actual = stringWriter.ToString();
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleTopThreeTest()
         {
@@ -51,7 +48,6 @@ namespace DigiRek_Tests_UnitTests
             var actual = stringWriter.ToString();
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void HandleMappingTest()
         {

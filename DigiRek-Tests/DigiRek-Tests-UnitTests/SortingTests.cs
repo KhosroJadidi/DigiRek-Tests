@@ -18,7 +18,6 @@ namespace DigiRek_Tests_UnitTests
                 Assert.AreEqual(array[i], expected[i]);
             }
         }
-
         [TestMethod]
         public void BubbleSortTest()
         {
@@ -30,7 +29,6 @@ namespace DigiRek_Tests_UnitTests
                 Assert.AreEqual(array[i], expected[i]);
             }
         }
-
         [TestMethod]
         public void SortAscendingRecursiveTest()
         {
@@ -42,7 +40,6 @@ namespace DigiRek_Tests_UnitTests
                 Assert.AreEqual(sortedArray[i], expected[i]);
             }
         }
-
         [TestMethod]
         public void SortAscendingLinqTest()
         {
