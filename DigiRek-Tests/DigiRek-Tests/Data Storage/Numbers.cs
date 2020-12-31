@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DigiRek_Tests.DataStorage
+﻿namespace DigiRek_Tests.Data_Storage
 {
     public static class Numbers
     {
-        public static double[] givenNumbers
+        public static double[] GivenNumbers
             = new double[]
             {
                 1, 84, 234, 1000, 23,
