@@ -1,11 +1,7 @@
 ﻿using DigiRek_Tests.Displayers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DigiRek_Tests_UnitTests
 {
@@ -13,7 +9,7 @@ namespace DigiRek_Tests_UnitTests
     [TestCategory("Messages Tests")]
     public class MessagesTests
     {
-        private readonly string[] choices = new[]
+        private readonly string[] _choices = new[]
         {
             "Sum of all numbers (sum)",
             "Average of all numbers (average)",
@@ -49,11 +45,11 @@ namespace DigiRek_Tests_UnitTests
             Messages.PrintChoices();
             var actual = stringWriter.ToString();
             var expected = string.Empty;
-            foreach (var item in choices)
+            foreach (var item in _choices)
             {
                 expected +=
                     Environment.NewLine
-                    +item 
+                    + item
                     + Environment.NewLine
                     + Environment.NewLine;
             }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DigiRek_Tests.Displayers
 {
@@ -11,7 +7,8 @@ namespace DigiRek_Tests.Displayers
         private Messages()
         {
         }
-        private static readonly string[] choices = new[]
+
+        private static readonly string[] Choices = new[]
         {
             "Sum of all numbers (sum)",
             "Average of all numbers (average)",
@@ -19,21 +16,23 @@ namespace DigiRek_Tests.Displayers
             "Map all values to a collection of key-value pairs (map)",
             "Quit the application (quit)"
         };
+
         public static void PrintChoices()
         {
-            foreach (var choice in choices)
+            foreach (var choice in Choices)
             {
-                var text = 
+                var text =
                     Environment.NewLine
-                    + choice 
+                    + choice
                     + Environment.NewLine;
                 Console.WriteLine(text);
             }
         }
+
         public static void PrintWelcome()
         {
             var message = "Welcome!"
-                +Environment.NewLine
+                + Environment.NewLine
                 + "Type in the word inside the parentheses to run the desired command, and press Enter."
                 + Environment.NewLine
                 + "You may also enter an entire sentence that contains the desired word."

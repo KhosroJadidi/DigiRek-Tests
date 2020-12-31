@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace DigiRek_Tests.HelperMethods.Extensions
+namespace DigiRek_Tests.Helper_Methods.Extensions
 {
     public static class Sorting
     {
@@ -14,6 +10,7 @@ namespace DigiRek_Tests.HelperMethods.Extensions
             source[secondIndex] = source[firstIndex];
             source[firstIndex] = secondElement;
         }
+
         public static void BubbleSort(this double[] array, int length)
         {
             if (length == 1)
@@ -25,12 +22,14 @@ namespace DigiRek_Tests.HelperMethods.Extensions
             }
             BubbleSort(array, length - 1);
         }
+
         public static double[] SortAscendingRecursive(this double[] numbers)
         {
             var array = (double[])numbers.Clone();
             BubbleSort(array, numbers.Length);
             return array;
         }
+
         public static double[] SortAscendingLinq(this double[] numbers)
         {
             return numbers.OrderBy(n => n)
