@@ -28,6 +28,8 @@ This project satisfies the requirements of the backend part of the test project,
 
 https://github.com/DigiRek/Tests
 
+(for VOLVO CAR RETAIL SOLUTION)
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 Simply run the project with your IDE or text editor of choice. VisualStudio 2019 is recommended. If you use VisualStudio Code, you might need to add some additional assets to the project to build it. If that happens to be the case, VisualStudio Code will prompt and ask you about this.
